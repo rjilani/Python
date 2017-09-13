@@ -1,0 +1,64 @@
+results = api.GetSearch(
+    raw_query="q=java%20&result_type=recent&since=2017-03-16&count=100&lang=en")
+
+# for i in results:
+#     print i
+
+statuses = api.GetUserTimeline(8224572)
+
+print type(statuses)
+
+for i in statuses:
+    print i
+# ratelimt = api.CheckRateLimit("https://twitter.com/rashidjilani")
+
+# print ratelimt
+#
+# print ratelimt
+
+# for i in dir(api):
+#     print i
+
+#stream.filter(track=['Asif Zardari', 'Imran Khan', 'Nawaz Sharif', 'Altaf Hussain', 'Pervez Musharraf'])
+    # stream.filter(track=['java', 'python', 'javascript', 'ruby', 'dcoker', 'aws', 'azure'])
+
+# for k, v in info.AsDict().items():
+#     print k,v
+#     if isinstance(v, dict):
+#         for k1, v1 in v.items():
+#             print k1,v1
+
+
+#config = ConfigParser.ConfigParser()
+# config.read('./config/config.ini')
+#
+# # Variables that contains the user credentials to access Twitter API
+#
+# access_token = config.get('Default','access_token')
+# access_token_secret = config.get('Default','access_token_secret')
+# consumer_key = config.get('Default','consumer_key')
+# consumer_secret = config.get('Default','consumer_secret')
+#
+# config.read('./config/globals.ini')
+# tagstoparse = config.get('Default','tags_to_watch').split(',')
+# tags = [i.replace('|', ' ') for i in tagstoparse]
+#
+# print tagstoparse
+# print tags
+
+
+users = api.GetFriends()
+
+print ([(u.name,u.location,u.listed_count, u.followers_count, u.time_zone, u.id) for u in users])
+
+# status = api.PostUpdate('this is a test for python API!')
+#
+# print (status.text)
+
+ # coords = status.coordinates
+ #user_created = status.user.created_at
+
+#id_str = status.id_str
+            # created = status.created_at
+            # retweets = status.retweet_count
+            # bg_color = status.user.profile_background_color

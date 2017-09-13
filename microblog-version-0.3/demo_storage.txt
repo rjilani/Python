@@ -1,0 +1,10 @@
+#!/bin/bash 
+
+python run.py
+
+http-server -p 63343 /C/Users/rjilani/WebstormProjects/LocalAndSessionStorage
+
+
+http://localhost:63343/sessionstorage.html
+
+http://localhost:63343/localstorage.html
